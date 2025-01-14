@@ -14,10 +14,10 @@ public class Main {
         processAnimal(scan, animalCount, animalList);
 
         animalList.stream().filter(herb -> herb instanceof Herbivore)
-                .forEach(a -> System.out.println(a.toString()));
+                .forEach(System.out::println);
 
         animalList.stream().filter(herb -> herb instanceof Omnivore)
-                .forEach(a -> System.out.println(a.toString()));
+                .forEach(System.out::println);
     }
 
     private static void processAnimal(Scanner scan, int animalCount, ArrayList<Animal> animalList) {
